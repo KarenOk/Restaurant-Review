@@ -1,0 +1,10 @@
+/* Index Page */
+@media  screen and (max-width: 450px){
+    #index-page header h1 a{
+        font-size: 0.8em;
+    }
+}
+
+
+
+/* Restaurant Details Page */
