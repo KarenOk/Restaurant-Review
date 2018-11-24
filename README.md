@@ -13,6 +13,6 @@ A mobile-ready web application. This site is responsive, accessible and availabl
 
 
 ### Dependencies 
-    - [Leaflet.js](https://www.mapbox.com/)
-    - [Mapbox](https://www.mapbox.com/)
+- [Leafletjs](https://www.mapbox.com/)
+- [Mapbox](https://www.mapbox.com/)
 
