@@ -26,15 +26,17 @@
 
     <section>
       <div class="filter-options flex-box">
-        <h2>Filter By: </h2>
+       <label for="filter-selects"> Filter By: </label>
 
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
-        </select>
-        
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
-        </select>
+        <div id="filter-selects" class="flex-box">
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
       </div>
 
       <ul id="restaurants-list" class="flex-box"></ul>
