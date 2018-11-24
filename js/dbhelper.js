@@ -150,7 +150,21 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    const splitPhotoUrl = restaurant.photograph.split(".");
+
+    let images = {
+      large: {},
+      medium: {},
+      small: {}
+    }
+
+    // Generate the different size links for the image
+    Object.keys(images).forEach(imageSize => {
+      images[imageSize]['2x'] = `/img/${splitPhotoUrl[0]}_${imageSize}_2x.${splitPhotoUrl[1]}`
+      images[imageSize]['1x'] = `/img/${splitPhotoUrl[0]}_${imageSize}_1x.${splitPhotoUrl[1]}`
+    });
+
+    return (images);
   }
 
   /**
