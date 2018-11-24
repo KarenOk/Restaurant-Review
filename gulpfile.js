@@ -1,43 +1,60 @@
 var gulp = require("gulp");
 var responsive = require("gulp-responsive");
+var clean = require("gulp-clean");
 
-gulp.task('processImages', function () {
+gulp.task("clean", function () {
+  gulp.src("img/", {read: false})
+  .pipe(clean())
+});
+
+gulp.task('images', ["clean"], function () {
   return gulp.src('img-src/**/*.{jpg,png}')
     .pipe(responsive({
       '*.jpg': [{
-        width: 300,
+        width: 320,
         rename: {
-          suffix: '-300px',
+          suffix: "_small_1x",
           extname: '.jpg'
         },
         format: 'jpeg'
       }, {
-        width: 600,
+        width: 320 * 2,
         rename: {
-          suffix: '-600px',
+          suffix: "_small_2x",
           extname: '.jpg'
-        }
+        },
       }, {
-        width: 1900,
+        width: 480,
         rename: {
-          suffix: '-1900px',
+          suffix: "_medium_1x",
+          extname: '.jpg'
+        },
+        format: 'jpeg'
+      }, {
+        width: 480 * 2,
+        rename: {
+          suffix: "_medium_2x",
+          extname: '.jpg'
+        },
+      }, {
+        width: 800,
+        rename: {
+          suffix: "_large_1x",
+          extname: '.jpg'
+        },
+      }, {
+        width: 800 * 2,
+        rename: {
+          suffix: "_large_2x",
           extname: '.jpg'
         },
         withoutEnlargement: true
-      }, {
-        // Convert images to the webp format
-        width: 630,
-        rename: {
-          suffix: '-630px',
-          extname: '.webp'
-        }
       }]
     }, {
-      // Global configuration for all images
-      quality: 80,
-      progressive: false,
-      withMetadata: true,
-      errorOnEnlargement: false
-    }))
+        quality: 80,
+        progressive: false,
+        withMetadata: true,
+        errorOnEnlargement: false
+      }))
     .pipe(gulp.dest('img/'));
 });
