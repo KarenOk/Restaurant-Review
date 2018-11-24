@@ -1,7 +1,58 @@
 /* Index Page */
+
+@media  screen and (max-width: 550px){
+    .filter-options label {
+        color: white;
+        font-size: 0.9em;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 20px;
+    }
+    .filter-options select {
+        font-size: 0.6em;
+        height: 2.5em;
+        width: 10em;
+    }
+    #restaurant-hours tr :first-child {
+        font-size: 1.1em;
+    } 
+
+    #restaurant-hours tr :nth-child(2){
+    font-size: 1em;
+    color: red;
+    
+    } 
+      
+}
+
 @media  screen and (max-width: 450px){
     #index-page header h1 a{
         font-size: 0.8em;
+    }
+    .inside header h1 a{
+        font-size: 0.8em;
+    }
+    #restaurant-hours tr :first-child {
+        font-size: 1em;
+    } 
+    #restaurant-hours tr :nth-child(2){
+    font-size: 0.9em;
+    color: green;    
+    } 
+}
+
+
+@media  screen and (max-width: 320px){
+    #index-page header h1 a{
+        font-size: 0.6em;
+    }
+
+    .filter-options label{
+        margin: 0;
+    }
+
+    .inside header h1 a{
+        font-size: 0.6em;
     }
 }
 
