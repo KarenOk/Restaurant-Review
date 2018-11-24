@@ -1,0 +1,22 @@
+{
+  "name": "restaurant-review",
+  "version": "0.0.0",
+  "description": "A responsive and offline first website.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarenOk/Restaurant-Review.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarenOk/Restaurant-Review/issues"
+  },
+  "homepage": "https://github.com/KarenOk/Restaurant-Review#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
