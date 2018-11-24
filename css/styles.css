@@ -141,13 +141,18 @@ nav{
   align-items: center;
   justify-content: flex-end;
 }
-.filter-options label {
+.filter-options #general-label {
   color: white;
   font-size: 1.1em;
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
 }
+
+.filter-options .field-label {
+  display: none;
+}
+
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
