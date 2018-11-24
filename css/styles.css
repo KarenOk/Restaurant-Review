@@ -190,6 +190,7 @@ nav{
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   margin: 0;
+  width: 90%;
   max-width: 100%;
 }
 
