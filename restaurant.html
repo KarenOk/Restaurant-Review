@@ -29,9 +29,9 @@
 
   </header>
 
-  <main id="maincontent">
+  <main id="maincontent" role="main">
 
-    <section id="restaurant-container">
+    <section id="restaurant-container" aria-label="Restaurant Details">
       <h1 id="restaurant-name"></h1>
       <picture id="restaurant-img"> </picture>
       <p id="restaurant-cuisine"></p>
@@ -39,12 +39,12 @@
       <table id="restaurant-hours"></table>
     </section>
 
-    <section id="reviews-container">
+    <section id="reviews-container" aria-label="Reviews">
       <ul id="reviews-list"></ul>
     </section>
 
-    <section id="map-container">
-      <div id="map"></div>
+    <section id="map-container" tabindex="0">
+      <div id="map" aria-label="Map" role="application"></div>
     </section>
 
   </main>

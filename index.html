@@ -15,31 +15,35 @@
 
 <body id="index-page">
   <header id="header" class="flex-box">
-      <h1><a href="/">Restaurant Reviews</a></h1>
+    <h1><a href="/">Restaurant Reviews</a></h1>
   </header>
 
   <main id="maincontent">
-
-    <section id="map-container">
-      <div id="map"></div>
+    <section id="map-container" tabindex="0" aria-label="Map">
+      <div id="map" role="application"></div>
     </section>
 
     <section>
       <div class="filter-options flex-box">
-       <label for="filter-selects"> Filter By: </label>
+        <label id="general-label"> Filter By: </label>
 
-        <div id="filter-selects" class="flex-box">
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-            <option value="all">All Neighborhoods</option>
-          </select>
-          
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-            <option value="all">All Cuisines</option>
-          </select>
-        </div>
+        <p id="neighborhoods-label" class="field-label"> neighborhoods</p>
+        <select id="neighborhoods-select" name="neighborhoods" aria-labelledby="general-label neighborhoods-label"
+          onchange="updateRestaurants()">
+          <option value="all">All Neighborhoods</option>
+        </select>
+
+        <p id="cuisines-label" class="field-label"> cuisines</p>
+        <select id="cuisines-select" name="cuisines" aria-labelledby="general-label cuisines-label" onchange="updateRestaurants()">
+          <option value="all">All Cuisines</option>
+        </select>
+
       </div>
 
-      <ul id="restaurants-list" class="flex-box"></ul>
+    </section>
+
+    <section>
+      <ul id="restaurants-list" aria-label="Restaurant List" class="flex-box"></ul>
     </section>
 
   </main>
