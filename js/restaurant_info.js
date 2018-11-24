@@ -91,22 +91,22 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   // Specify various conditions for the browser to choose an image
   pictureEl.innerHTML = `
-    <source media="(min-width: 800px)" 
+    <source media="(min-width: 750px)" 
             srcset="${imageUrls["large"]["2x"]} 2x,
                     ${imageUrls["large"]["1x"]}" 
     />
 
-    <source media="(min-width: 321px)"
+    <source media="(min-width: 401px)"
             srcset="${imageUrls["medium"]["2x"]} 2x,
                     ${imageUrls["medium"]["1x"]}"    
     />
 
-    <source media="(max-width: 320px)"
+    <source media="(max-width: 400px)"
             srcset="${imageUrls["small"]["2x"]} 2x,
                     ${imageUrls["small"]["1x"]}"  
     />
 
-    <img  alt=${restaurant.name}
+    <img  alt="${restaurant.name}"
           src="${imageUrls["medium"]["1x"]}",
           class="restaurant-img"
     >
